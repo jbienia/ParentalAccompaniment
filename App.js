@@ -5,7 +5,8 @@
  */
 
 import React, { Component } from 'react';
-import {Tabs} from './src/config/router'
+import {Routes} from './src/config/router'
+import {StackNavigator} from 'react-navigation'
 import {
   Platform,
   StyleSheet,
@@ -24,7 +25,7 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <Tabs/>
+      <Routes/>
     );
   }
 }

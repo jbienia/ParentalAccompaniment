@@ -4,6 +4,7 @@ import {
   AppRegistry,
   StyleSheet,
   View,
+  TouchableOpacity
 } from 'react-native'
 
 // import AppWithStore from './src/AppWithStore'
@@ -13,7 +14,9 @@ class test2 extends Component {
   render() {
     return (
       <View style={styles.container}>
+       <TouchableOpacity onPress ={()=>{this.props.navigation.navigate("test1")}}>
         <Text>Page 2</Text>
+        </TouchableOpacity>
       </View>
     )
   }
