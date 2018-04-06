@@ -9,42 +9,34 @@ export const Tabs = TabNavigator({
     test1: {
       screen: test1,
       navigationOptions: {
-        title: 'test1',
+        title: 'JY',
         
       },
     },
-    test2: {
-      screen: test2,
-      navigationOptions: {
-        title: 'test2',
+    // test2: {
+    //   screen: test2,
+    //   navigationOptions: {
+    //     title: 'test2',
         
-      },
-    },
+    //   },
+    // },
   });
-
-export const Stack = StackNavigator({
-    test1: {
-        screen: test1,
-        navigationOptions: {
-            title: 'test1',
-            
-          },
-      },
-      test2: {
-        screen: test2,
-        navigationOptions: {
-            title: 'test2',
-            
-          },
-      },
-})
 
 export const Routes = StackNavigator({
         Tabs:{
             screen:Tabs
         },
-        Stack:{
-            screen:Stack
-        }
+        test1: {
+            screen: test1,
+            navigationOptions: {
+                title: 'test1',  
+              },
+          },
+          test2: {
+            screen: test2,
+            navigationOptions: {
+                title: 'IS BEST',     
+              },
+          },
        
 })
