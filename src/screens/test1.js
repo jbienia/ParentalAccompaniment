@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import firebase from 'react-native-firebase';
+
+
 import {
     Text,
   AppRegistry,
@@ -12,6 +15,7 @@ import {
 
 class test1 extends Component {
   render() {
+    console.log(firebase.database().ref('/users').push("Hey bean")); // '[DEFAULT]'
     return (
       <View style={styles.container}>
       <TouchableOpacity onPress ={()=>{this.props.navigation.navigate("test2")}}>
