@@ -2,31 +2,31 @@ import React from 'react';
 import { TabNavigator,StackNavigator } from 'react-navigation';
 //import { Icon } from 'react-native-elements';
 //import {Icon} from 'react-native-vector-icons'
-import test1 from '.././screens/test1';
-import test2 from '.././screens/test2';
+import IndividualGroup from '.././screens/IndividualGroup';
+import Home from '.././screens/Home';
 import test3 from '.././screens/test3';
 import test4 from '.././screens/test4';
 //import Icon from 'react-native-vector-icons/FontAwesome'
 
 export const Tabs = TabNavigator({
-    test1: {
-      screen: test1,
+    Home: {
+      screen: Home,
       navigationOptions: {
-        title: 'Junior Youth Companion',
+        title: 'Home',
        size:1,
         headerTintColor: 'black',
         headerStyle: {
           backgroundColor: '#e8edf3',
-          fontSize:38,
-          size:1,
+          // fontSize:38,
+          // size:1,
         //fontSize:55,
         },  
       },
     },
-    test2: {
-      screen: test2,
+    IndividualGroup: {
+      screen: IndividualGroup,
       navigationOptions: {
-        title: 'CC',
+        title: 'Group',
         
       },
     },
@@ -50,8 +50,8 @@ export const Routes = StackNavigator({
         Tabs:{
             screen:Tabs
         },
-        test1: {
-            screen: test1,
+        Home: {
+            screen: Home,
             navigationOptions: {
                 title: 'test1', 
                 headerStyle: {
@@ -59,8 +59,8 @@ export const Routes = StackNavigator({
                 }, 
               },
           },
-          test2: {
-            screen: test2,
+          IndividualGroup: {
+            screen: IndividualGroup,
             navigationOptions: {
                 title: 'IS BEST',     
               },

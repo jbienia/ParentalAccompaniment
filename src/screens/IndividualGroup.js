@@ -13,9 +13,19 @@ import {
 //import AppWithStore from './src/AppWithStore'
 //import StatusBarSelect from './src/components/StatusBarSelect'
 
-class test1 extends Component {
+class IndividualGroup extends Component {
   render() {
-    console.log(firebase.database().ref('/users').push("Hey bean")); // '[DEFAULT]'
+   let object= {
+      animator:'Farhoud',
+      grouptTime:'Friday at 630pm',
+      location:'Killarney Kits Club'
+    }
+    //console.log(firebase.database().ref('/users').push("Hey bean")); // '[DEFAULT]'
+    // let key=firebase.database().ref(`/juniorYouthGroups/`).push(object)
+    // firebase.database().ref(`${key.key}/jason`).push(object)
+    
+    //.then(
+    //firebase.database().ref(`/users/${key}`).push(object)//)
     return (
       <View style={styles.container}>
         <View style={styles.headerContainer}>
@@ -26,7 +36,7 @@ class test1 extends Component {
             <View  style={styles.tester}>
             </View>
             <View style={styles.todaysConcept}>
-              <Text style={styles.informationText} >What can you and your friends do to care for planet earth?</Text>
+              <Text style={styles.informationText}>{this.props.navigation.state.params.content.discussion}</Text>
             </View>
         </View>
         <View  style={styles.memorizationContainer}>
@@ -34,7 +44,7 @@ class test1 extends Component {
           <View  style={styles.tester2}>
           </View>
             <View style={styles.todaysConcept}>
-              <Text style={styles.informationText}>"Let your heart burn with loving kindness for all who may cross your path."</Text>
+              <Text style={styles.informationText}>{this.props.navigation.state.params.content.memorization}</Text>
             </View>
         </View> 
       </View>
@@ -66,7 +76,7 @@ const styles = StyleSheet.create({
     width:70
   },
   subHeading:{
-    fontSize:20,
+    fontSize:15,
     marginTop:20,
     margin:10,
     fontWeight:'bold',
@@ -78,7 +88,7 @@ const styles = StyleSheet.create({
 
   },
   informationText:{
-    fontSize:30,
+    fontSize:25,
     marginTop:10,
     marginBottom: 10,
     color:'white'
@@ -99,7 +109,7 @@ const styles = StyleSheet.create({
     padding:10
   },
   heading:{
-    fontSize:30,
+    fontSize:25,
     margin:0,
     color:'#4a4a4a',
    
@@ -110,7 +120,7 @@ const styles = StyleSheet.create({
   headerContainer:{
       // borderRadius:5,
       // backgroundColor:'#e6cf8b',
-      
+      alignItems:'center',
     marginHorizontal:20,
     marginVertical:20
   },
@@ -119,4 +129,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default test1
+export default IndividualGroup
