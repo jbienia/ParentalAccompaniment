@@ -16,9 +16,9 @@ import {
 class IndividualGroup extends Component {
   render() {
    let object= {
-      animator:'Farhoud',
-      grouptTime:'Friday at 630pm',
-      location:'Killarney Kits Club'
+      animator:'Hoda, Neda',
+      groupTime:'Sunday at 100pm',
+      location:'Stamps community center'
     }
     //console.log(firebase.database().ref('/users').push("Hey bean")); // '[DEFAULT]'
     // let key=firebase.database().ref(`/juniorYouthGroups/`).push(object)
@@ -29,7 +29,7 @@ class IndividualGroup extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.headerContainer}>
-          <Text style={styles.heading}>April 4</Text>
+          <Text style={styles.heading}>Sun Apr 08</Text>
         </View>
         <View style={styles.discussionContainer}>
           <Text style={styles.subHeading}>DISCUSSION TOPIC</Text>

@@ -47,22 +47,22 @@ export const Tabs = TabNavigator({
   });
 
 export const Routes = StackNavigator({
-        Tabs:{
-            screen:Tabs
-        },
+        // Tabs:{
+        //     screen:Tabs
+        // },
         Home: {
             screen: Home,
             navigationOptions: {
-                title: 'test1', 
+                title: 'Home', 
                 headerStyle: {
-                  backgroundColor: 'red'
+                  backgroundColor: 'white'
                 }, 
               },
           },
           IndividualGroup: {
             screen: IndividualGroup,
             navigationOptions: {
-                title: 'IS BEST',     
+                title: 'Lesson of the week',     
               },
           },
        

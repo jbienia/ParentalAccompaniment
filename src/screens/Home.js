@@ -23,6 +23,7 @@ class Home extends Component {
   }
 
   componentDidMount(){
+    console.disableYellowBox = true;
     // read data in from firebse
     firebase.database().ref(`/juniorYouthGroups`).once('value',
                                                   (groups)=>{this.setState({
